@@ -24,34 +24,22 @@ footer {
   z-index: 1; }
 
 section {
-  position: relative;
   height: 100vh;
-  text-align: center;
-  align-content: center;
-  box-sizing: border-box; }
+  padding-top: 45vh;
+  box-sizing: border-box;
+  background-size: cover;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out; }
   section p {
-    position: absolute;
-    top: 45vh;
-    width: 100vw;
     text-align: center;
-    z-index: 2;
     padding: 5px;
     color: black;
-    background-color: white;
-    box-sizing: border-box; }
-  section > .carousel-item {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background-position: center;
-    background-size: cover;
-    opacity: 0;
-    z-index: 0;
-    -webkit-transition: opacity 2s ease-in-out;
-    -moz-transition: opacity 2s ease-in-out;
-    -o-transition: opacity 2s ease-in-out;
-    transition: opacity 2s ease-in-out; }
-    section > .carousel-item.in {
-      opacity: 100; }
+    background-color: white; }
+
+.preload {
+  width: 0px;
+  height: 0px;
+  display: none;
+  visibility: hidden; }

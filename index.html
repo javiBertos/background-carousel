@@ -4,21 +4,26 @@
     <title>Starting with Backbone and JS</title>
 
     <link rel="stylesheet" href="css/main.css" />
+
+    <style>
+      .bg-1 { background-image:url('http://lorempixel.com/1024/600/cats/1'); }
+      .bg-2 { background-image:url('http://lorempixel.com/1024/600/cats/2'); }
+      .bg-3 { background-image:url('http://lorempixel.com/1024/600/cats/3'); }
+    </style>
   </head>
 
   <body>
-
     <header>Can you see the background changing??</header>
 
-    <section>
+    <section class="bg-1">
       <p>
         We use items with a background set by the "style" attribute in order to get the "background-size:cover" capabilities
       </p>
-
-      <article class="carousel-item in" style="background-image:url('http://lorempixel.com/1024/600/sports/');"></article>
-      <article class="carousel-item" style="background-image:url('http://lorempixel.com/1024/600/cats/');"></article>
-      <article class="carousel-item" style="background-image:url('http://lorempixel.com/1024/600/transport/');"></article>
     </section>
+
+    <div class="preload bg-1"></div>
+    <div class="preload bg-2"></div>
+    <div class="preload bg-3"></div>
 
     <footer>Enjoy!!</footer>
 

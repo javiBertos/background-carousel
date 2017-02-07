@@ -1,16 +1,10 @@
 (() => {
-    let count = 0,
-        maxCount = document.getElementsByClassName('carousel-item').length;
+    let carousel = document.getElementsByTagName('section')[0],
+        current = 1;
 
     window.setInterval(() => {
-        let shown = document.getElementsByClassName('carousel-item')[count],
-            next = document.getElementsByClassName('carousel-item')[++count == maxCount? 0 : count];
-
-        if (count >= maxCount) {
-            count = 0;
-        }
-
-        shown.classList.remove('in');
-        next.classList.add('in');
+        carousel.classList.remove(`bg-${current}`);
+        current = ++current == 4? 1 : current;
+        carousel.classList.add(`bg-${current}`);
     }, 5000);
 })();
