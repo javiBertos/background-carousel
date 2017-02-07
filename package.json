@@ -1,0 +1,42 @@
+{
+  "name": "background-carousel",
+  "version": "1.0.0",
+  "description": "Make a carousel with backgrounds",
+  "main": "index.html",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server",
+    "start-dev": "tsc -v && tsc && npm run build-css && concurrently \"npm run tsc:w\" \"npm run build-css:w\"",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "build-css": "node-sass --include-path scss --recursive --output css scss",
+    "build-css:w": "node-sass -w --include-path scss --recursive --output css scss",
+    "build-assets": "tsc && npm run build-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/javiBertos/background-carousel.git"
+  },
+  "keywords": [
+    "js",
+    "typescript",
+    "sass"
+  ],
+  "author": "Javier Bertos <yo@javierbertos.name>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javiBertos/background-carousel/issues"
+  },
+  "homepage": "https://github.com/javiBertos/background-carousel#readme",
+  "dependencies": {
+    "systemjs": "^0.19.42"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "concurrently": "^3.1.0",
+    "node-sass": "^4.3.0",
+    "nodemon": "^1.11.0",
+    "typescript": "^2.1.5",
+    "typings": "^2.1.0"
+  }
+}

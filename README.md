@@ -1,2 +1,2 @@
 # background-carousel
-A carousel made changing the background image...
+Make a carousel using elements with background to get advantage of the css background-size properties.

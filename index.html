@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Starting with Backbone and JS</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+
+    <header>Can you see the background changing??</header>
+
+    <section>
+      <p>
+        We use items with a background set by the "style" attribute in order to get the "background-size:cover" capabilities
+      </p>
+
+      <article class="carousel-item in" style="background-image:url('http://lorempixel.com/1024/600/sports/');"></article>
+      <article class="carousel-item" style="background-image:url('http://lorempixel.com/1024/600/cats/');"></article>
+      <article class="carousel-item" style="background-image:url('http://lorempixel.com/1024/600/transport/');"></article>
+    </section>
+
+    <footer>Enjoy!!</footer>
+
+    <script src="/node_modules/systemjs/dist/system.js"></script>
+    <script>
+      System.config({
+        packages: {
+          ".": {
+            format: "cjs",
+            defaultExtension: "js"
+          }
+        }
+      });
+      System.import( "./app/app" );
+    </script>
+  </body>
+</html>
